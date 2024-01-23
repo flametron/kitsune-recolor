@@ -19,9 +19,9 @@ function _omb_theme_PROMPT_COMMAND() {
 
   local SC
   if ((status == 0)); then
-    SC="$_omb_prompt_teal-$_omb_prompt_bold_red(${_omb_prompt_green}✔$_omb_prompt_bold_red)";
+    SC="$_omb_prompt_orange-$_omb_prompt_bold_red(${_omb_prompt_green}✔$_omb_prompt_bold_red)";
   else
-    SC="$_omb_prompt_teal-$_omb_prompt_bold_red(${_omb_prompt_brown}✘$_omb_prompt_bold_red)";
+    SC="$_omb_prompt_orange-$_omb_prompt_bold_red(${_omb_prompt_brown}✘$_omb_prompt_bold_red)";
   fi
 
   local BC=$(battery_percentage)
@@ -31,7 +31,7 @@ function _omb_theme_PROMPT_COMMAND() {
   local python_venv
   _omb_prompt_get_python_venv
 
-  PS1=$TITLEBAR"\n${_omb_prompt_teal}┌─${_omb_prompt_bold_white}[\u@\h]${_omb_prompt_teal}─${_omb_prompt_bold_olive}(\w)$(scm_prompt_info)$python_venv\n${_omb_prompt_teal}└─${_omb_prompt_bold_red}[\A]$SC$BC${_omb_prompt_teal}-${_omb_prompt_bold_teal}[${_omb_prompt_red}${_omb_prompt_bold_red}\$${_omb_prompt_bold_teal}]${_omb_prompt_red} "
+  PS1=$TITLEBAR"\n${_omb_prompt_orange}┌─${_omb_prompt_bold_white}[\u@\h]${_omb_prompt_orange}─${_omb_prompt_bold_olive}(\w)$(scm_prompt_info)$python_venv\n${_omb_prompt_orange}└─${_omb_prompt_bold_red}[\A]$SC$BC${_omb_prompt_orange}-${_omb_prompt_bold_red}[${_omb_prompt_red}${_omb_prompt_bold_red}\$${_omb_prompt_bold_red}]${_omb_prompt_red} "
 }
 
 # scm theming
