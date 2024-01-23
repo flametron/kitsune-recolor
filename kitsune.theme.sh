@@ -21,7 +21,7 @@ function _omb_theme_PROMPT_COMMAND() {
   if ((status == 0)); then
     SC="$_omb_prompt_teal-$_omb_prompt_bold_red(${_omb_prompt_green}✔$_omb_prompt_bold_red)";
   else
-    SC="$_omb_prompt_teal-$_omb_prompt_bold_red(${_omb_prompt_brown}✘	$_omb_prompt_bold_red)";
+    SC="$_omb_prompt_teal-$_omb_prompt_bold_red(${_omb_prompt_brown}✘$_omb_prompt_bold_red)";
   fi
 
   local BC=$(battery_percentage)
